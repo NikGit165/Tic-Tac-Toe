@@ -60,9 +60,59 @@ mvn -P with-jre clean package
   - `start.cmd` for Windows;
   - `start.sh` for MacOS or Linux;
 
------------------------------------------------------------------------------------
+======================================================================== Инструкции по сборке
 
-## Readme tutorial
+- Сборка дистрибутивов с помощью инструмента maven:
 
-- https://guides.github.com/features/mastering-markdown/
-- https://help.github.com/categories/writing-on-github/
+```bash
+ mvn -P без чистого пакета jre
+ ```
+
+- Используйте следующие архивы:
+- `target/крестики-нолики-${project.version}-windows.zip` для Windows
+- `target/tic-tac-toe-${project.version}-unix.tar.gz` для MacOS или Linux
+
+## Инструкции по запуску
+
+- Загрузите OpenJDK 11;
+- Разархивируйте загруженный архив OpenJDK;
+- Настройте переменную среды PATH:
+  - Добавьте каталог %JDK_HOME%\bin\ для Windows;
+  - Добавьте каталог $JDK_HOME/bin/ для MacOS и Linux;
+- Перелогиньтесь или перезагрузите компьютер;
+- Разархивируйте дистрибутив Крестики-нолики:
+  - Разархивируйте `крестики-нолики-${project.version}-windows.zip` для Windows;
+  - Разархивируйте `крестики-нолики-${project.version}-unix.tar.gz` для MacOS или Linux;
+- Перейти в разархивированный каталог;
+- Запустите игру двойным кликом по стартовому скрипту:
+  - `start.cmd` для Windows;
+  - `start.sh`для MacOS или Linux;
+
+---------------------------------------------------------------------------------------------
+
+## С JRE
+
+### Инструкции по сборке
+
+-Сборка дистрибутивов с помощью инструмента maven:
+
+```bash
+mvn -P with-jre чистый пакет
+```
+
+- Используйте следующие архивы:
+  - `target/tic-tac-toe-${project.version}-windows-with-jre.zip` для Windows
+  - `target/tic-tac-toe-${project.version}-macos-with-jre.tar.gz` для MacOS
+  - `target/tic-tac-toe-${project.version}-linux-with-jre.tar.gz` для Linux
+  -
+
+### Инструкции по запуску
+
+- Разархивируйте дистрибутив Крестики-нолики:
+  - Разархивируйте `tic-tac-toe-${project.version}-windows-with-jre.zip` для Windows;
+  - Разархивируйте `tic-tac-toe-${project.version}-macos-with-jre.tar.gz` для MacOS;
+  - Разархивируйте `tic-tac-toe-${project.version}-linux-with-jre.tar.gz` для Linux;
+- Перейти в разархивированный каталог;
+- Запустите игру двойным кликом по стартовому скрипту:
+  - `start.cmd` для Windows;
+  - `start.sh` для MacOS или Linux; 
